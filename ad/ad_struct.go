@@ -11,7 +11,7 @@ const (
 	siteFilter = ` AND site in ('SZSP', 'SZST', 'CSSC', 'SZGD', 'SZSM', 'SZEM', 'SZED', 'SZES', 'SZIV', 'YCSM', 'YCPT', 'YCDF', 'SZCC', 'SZSE','YCSE','LYSP','LYPT', 'SQSE', 'CSAS', 'BTSE', 'JXSE', 'JXST', 'JXNM', 'CSSM', 'CSTG', 'CSTL', 'XNPT','SSCH')`
 	//siteFilter = ` AND username = 'Y1E03710'`
 	//siteFilter = ` AND site in ('YCSE')`
-	personFilter = ` AND (titleCn is NULL or titleCn not like '%总经理') AND (emailaddress NOT LIKE '%@canadiansolar.com' OR emailAddress is NULL) AND personIdExternal not in ('S0E01763', 'S1E00005', 'C1E14283', 'S0E00001', 'S0E00002', 'S0E01147', 'S0E00626','S0E00919') AND username = 'xinming.fan'`
+	personFilter = ` AND (titleCn is NULL or titleCn not like '%总经理') AND (emailaddress NOT LIKE '%@canadiansolar.com' OR emailAddress is NULL) AND personIdExternal not in ('S0E01763', 'S1E00005', 'C1E14283', 'S0E00001', 'S0E00002', 'S0E01147', 'S0E00626','S0E00919')`
 
 	queryUpdateAll  = `SELECT * from UNI_ID..View_SFAttrForAD WHERE username != 'null' AND lastDateWorked < startDate`
 	queryDisableAll = `SELECT * FROM UNI_ID..View_SFAttrForAD WHERE username != 'null' AND lastDateWorked >= startDate AND lastDateWorked <= GETDATE()`
@@ -194,16 +194,16 @@ var (
 		"prd": "934A57D3-1433-4C9A-903E-EB11C5588464",
 	}
 
-	mapZohoMail = map[string]map[string]string{
-		"new": {
-			"subject": "New employee on boarding. Please setup PC - %s",
-			"body":    "New employee on boarding, please find details as below:\nName: %s\nUser ID: %s\nSite: %s\nJob level: %s\nStart date: %s",
-		},
-		"update": {
-			"subject": "New employee on boarding. Please setup PC - %s",
-			"body":    "New employee on boarding, please find details as below:\nName: %s\nUser ID: %s\nSite: %s\nJob level: %s\nStart date: %s",
-		},
-	}
+	//mapZohoMail = map[string]map[string]string{
+	//	"new": {
+	//		"subject": "New employee on boarding. Please setup PC - %s",
+	//		"body":    "New employee on boarding, please find details as below:\nName: %s\nUser ID: %s\nSite: %s\nJob level: %s\nStart date: %s",
+	//	},
+	//	"update": {
+	//		"subject": "New employee on boarding. Please setup PC - %s",
+	//		"body":    "New employee on boarding, please find details as below:\nName: %s\nUser ID: %s\nSite: %s\nJob level: %s\nStart date: %s",
+	//	},
+	//}
 
 	mapZohoData = map[string]map[string]string{
 		"dev": {
